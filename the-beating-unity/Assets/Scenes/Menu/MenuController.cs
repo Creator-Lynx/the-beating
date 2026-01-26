@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
@@ -12,5 +13,15 @@ public class MenuController : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void StartGame()
+    {
+        SceneManager.LoadSceneAsync(2);//loading screen
+    }
+
+    public void Exit()
+    {
+        Application.Quit();
     }
 }
