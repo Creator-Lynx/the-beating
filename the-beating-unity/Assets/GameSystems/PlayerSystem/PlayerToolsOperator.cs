@@ -1,5 +1,5 @@
-using UnityEditor;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerToolsOperator : MonoBehaviour
 {
@@ -39,13 +39,29 @@ public class PlayerToolsOperator : MonoBehaviour
         CallTool(index);
     }
 
-    void Start()
-    {
-        GettingTool(PlayerTools.Axe);
-    }
 
+    //operate inputs
+    InputAction selectTool1;
+    InputAction selectTool2;
+    InputAction selectTool3;
+    InputAction selectTool4;
+
+    void Awake()
+    {
+        selectTool1 = InputSystem.actions.FindAction("FirstTool");
+        selectTool2 = InputSystem.actions.FindAction("SecondTool");
+        selectTool3 = InputSystem.actions.FindAction("ThirdTool");
+        selectTool4 = InputSystem.actions.FindAction("FourthTool");
+    }
     void Update()
     {
-        
+        //test getting axe
+        if(Keyboard.current.xKey.wasPressedThisFrame) GettingTool(PlayerTools.Axe);
+
+        //input operate
+        if(selectTool1.WasPressedThisFrame()) CallTool(PlayerTools.Axe);
+        if(selectTool2.WasPressedThisFrame()) CallTool(PlayerTools.Gun);
+        if(selectTool3.WasPressedThisFrame()) CallTool(PlayerTools.Shotgun);
+        //if(selectTool4.WasPressedThisFrame()) Debug.Log("FourthTool");
     }
 }
