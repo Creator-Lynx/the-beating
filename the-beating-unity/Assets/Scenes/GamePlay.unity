@@ -496,6 +496,22 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.12400001
       objectReference: {fileID: 0}
+    - target: {fileID: 4633609384639304978, guid: ad519ec3c30210245bb28a385f0e8870, type: 3}
+      propertyPath: Priority
+      value: 155
+      objectReference: {fileID: 0}
+    - target: {fileID: 4633609384639304978, guid: ad519ec3c30210245bb28a385f0e8870, type: 3}
+      propertyPath: m_Volume
+      value: 0.449
+      objectReference: {fileID: 0}
+    - target: {fileID: 4633609384639304978, guid: ad519ec3c30210245bb28a385f0e8870, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0.551
+      objectReference: {fileID: 0}
+    - target: {fileID: 4633609384639304978, guid: ad519ec3c30210245bb28a385f0e8870, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 1.1
+      objectReference: {fileID: 0}
     - target: {fileID: 5443857266793019801, guid: ad519ec3c30210245bb28a385f0e8870, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.12400001

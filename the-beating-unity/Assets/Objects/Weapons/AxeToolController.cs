@@ -8,6 +8,7 @@ public class AxeToolController : MonoBehaviour
     InputAction movingAction;
     InputAction attackAction;
     Animator axeAnimator;
+    AudioSource axeSwing;
 
 
 
@@ -18,6 +19,7 @@ public class AxeToolController : MonoBehaviour
         movingAction = InputSystem.actions.FindAction("Move");
         attackAction = InputSystem.actions.FindAction("Attack");
         axeAnimator = gameObject.GetComponent<Animator>();
+        axeSwing = GetComponent<AudioSource>();
     }
 
 
@@ -25,6 +27,13 @@ public class AxeToolController : MonoBehaviour
     {
         //walk animation performed
         if(Time.frameCount % 4 == 0)
-        axeAnimator.SetBool("IsWalk", movingAction.IsInProgress());    
+        axeAnimator.SetBool("IsWalk", movingAction.IsInProgress());  
+
+        //attack animation
+        if (attackAction.WasPressedThisFrame()) 
+        {
+            axeAnimator.SetTrigger("Attack");   
+            axeSwing.Play();
+        }
     }
 }
