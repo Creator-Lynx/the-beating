@@ -3,6 +3,7 @@ using UnityEngine;
 public class TreeDamageable : MonoBehaviour, IDamageable
 {
     [SerializeField] int hp = 5;
+    [SerializeField] TreeBehaviour treeBehaviour;
 
     public void GetDamage()
     {
@@ -16,6 +17,7 @@ public class TreeDamageable : MonoBehaviour, IDamageable
 
     void Death()
     {
+        treeBehaviour.Death();
         Debug.Log("Tree Destrioyed");
     }
 
