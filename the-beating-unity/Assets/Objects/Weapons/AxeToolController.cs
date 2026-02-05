@@ -10,6 +10,10 @@ public class AxeToolController : MonoBehaviour
     Animator axeAnimator;
     AudioSource axeAttackAudioSource;
 
+    //[Header("damage section")]
+    //[SerializeField] 
+    //DAMAGE SECTION
+    Collider damageTrigger;
 
 
     void Awake()
@@ -19,6 +23,7 @@ public class AxeToolController : MonoBehaviour
         attackAction = InputSystem.actions.FindAction("Attack");
         axeAnimator = GetComponent<Animator>();
         axeAttackAudioSource = GetComponent<AudioSource>();
+        damageTrigger = GetComponent<Collider>();
     }
 
 
@@ -38,5 +43,27 @@ public class AxeToolController : MonoBehaviour
     public void CallAttackSound()
     {
         axeAttackAudioSource!.Play();
+    }
+
+    //damage
+    //REMEMBER TO SETTING ON AND OFF COLLIDER!!!!!!!!!
+    public void EnableDamageTrigger()
+    {
+        damageTrigger!.enabled = true;
+    }
+
+    public void DisableDamaTrigger()
+    {
+        damageTrigger!.enabled = false;
+    }
+
+    //CALL DAMAGE
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.GetComponent<TreeDamageable>() != null)
+        {
+            other.gameObject.GetComponent<TreeDamageable>().GetDamage();
+        }
+       Debug.Log(other.gameObject.name);
     }
 }

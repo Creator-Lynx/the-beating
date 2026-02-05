@@ -143,6 +143,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 375517915199365746, guid: 775fd49a7603c7c43baf6bf9af8ac3e8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2817214968493722006}
+    - targetCorrespondingSourceObject: {fileID: 375517915199365746, guid: 775fd49a7603c7c43baf6bf9af8ac3e8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5499966480481396717}
     - targetCorrespondingSourceObject: {fileID: -8090486237971714361, guid: 775fd49a7603c7c43baf6bf9af8ac3e8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5403526250375122203}
@@ -234,6 +237,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2494185979427425891, guid: 775fd49a7603c7c43baf6bf9af8ac3e8, type: 3}
+--- !u!114 &5499966480481396717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8274817567557552817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83c9f358f0e1c66409483b72fa3a1981, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TreeDamageable
 --- !u!1 &8671897205334640132 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8090486237971714361, guid: 775fd49a7603c7c43baf6bf9af8ac3e8, type: 3}
