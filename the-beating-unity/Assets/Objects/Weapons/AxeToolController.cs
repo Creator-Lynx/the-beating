@@ -60,9 +60,9 @@ public class AxeToolController : MonoBehaviour
     //CALL DAMAGE
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.GetComponent<TreeDamageable>() != null)
+        if(other.gameObject.GetComponent<IDamageable>() != null)
         {
-            other.gameObject.GetComponent<TreeDamageable>().GetDamage();
+            other.gameObject.GetComponent<IDamageable>().GetDamage();
         }
        Debug.Log(other.gameObject.name);
     }

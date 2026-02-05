@@ -7,4 +7,5 @@ public interface IDamageable
     {
         Debug.Log("Defaul damage is detected");
     }
+    
 }
