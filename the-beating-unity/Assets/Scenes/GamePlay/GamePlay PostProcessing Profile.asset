@@ -1,33 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7887086920697529360
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 556797029e73b2347956b6579e77e05b, type: 3}
-  m_Name: DepthOfField
-  m_EditorClassIdentifier: Unity.Postprocessing.Runtime::UnityEngine.Rendering.PostProcessing.DepthOfField
-  active: 0
-  enabled:
-    overrideState: 1
-    value: 1
-  focusDistance:
-    overrideState: 1
-    value: 2.43
-  aperture:
-    overrideState: 1
-    value: 17.06
-  focalLength:
-    overrideState: 1
-    value: 162.6
-  kernelSize:
-    overrideState: 1
-    value: 1
 --- !u!114 &-7165028988897009524
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -46,13 +18,13 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: -30
+    value: -36.8
   intensityX:
     overrideState: 1
     value: 1
   intensityY:
     overrideState: 1
-    value: 0.25
+    value: 0.164
   centerX:
     overrideState: 0
     value: 0
@@ -60,8 +32,8 @@ MonoBehaviour:
     overrideState: 0
     value: 0
   scale:
-    overrideState: 1
-    value: 1.05
+    overrideState: 0
+    value: 1.01
 --- !u!114 &-7155334560080244267
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -143,23 +115,23 @@ MonoBehaviour:
     overrideState: 1
     value: 2
   toneCurveToeStrength:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 0.405
   toneCurveToeLength:
-    overrideState: 0
-    value: 0.5
+    overrideState: 1
+    value: 0.38
   toneCurveShoulderStrength:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 0.295
   toneCurveShoulderLength:
-    overrideState: 0
+    overrideState: 1
     value: 0.5
   toneCurveShoulderAngle:
-    overrideState: 0
+    overrideState: 1
     value: 0
   toneCurveGamma:
-    overrideState: 0
-    value: 1
+    overrideState: 1
+    value: 1.05
   ldrLut:
     overrideState: 0
     value: {fileID: 0}
@@ -169,64 +141,64 @@ MonoBehaviour:
     value: 1
   temperature:
     overrideState: 0
-    value: 0
+    value: -8.5
   tint:
     overrideState: 0
-    value: 0
+    value: -13.6
   colorFilter:
     overrideState: 1
-    value: {r: 0.6933962, g: 0.8327616, b: 1, a: 1}
+    value: {r: 0.8204432, g: 0.964608, b: 0.9716981, a: 1}
   hueShift:
-    overrideState: 0
+    overrideState: 1
     value: 0
   saturation:
     overrideState: 1
-    value: -5.7
+    value: -50
   brightness:
     overrideState: 0
     value: 0
   postExposure:
     overrideState: 1
-    value: 1.29
+    value: 1.3
   contrast:
     overrideState: 1
-    value: -22.7
+    value: 19.5
   mixerRedOutRedIn:
     overrideState: 0
-    value: 100
+    value: -19
   mixerRedOutGreenIn:
     overrideState: 0
-    value: 0
+    value: -31
   mixerRedOutBlueIn:
     overrideState: 0
-    value: 0
+    value: -23
   mixerGreenOutRedIn:
     overrideState: 0
-    value: 0
+    value: 101
   mixerGreenOutGreenIn:
     overrideState: 0
-    value: 100
+    value: 200
   mixerGreenOutBlueIn:
     overrideState: 0
-    value: 0
+    value: -200
   mixerBlueOutRedIn:
     overrideState: 0
-    value: 0
+    value: -200
   mixerBlueOutGreenIn:
     overrideState: 0
-    value: 0
+    value: -200
   mixerBlueOutBlueIn:
     overrideState: 0
-    value: 100
+    value: -200
   lift:
     overrideState: 1
-    value: {x: 0.84631556, y: 0.89469546, z: 1, w: 0}
+    value: {x: 0.8714253, y: 0.8921801, z: 1, w: 0}
   gamma:
     overrideState: 1
-    value: {x: 1, y: 0.90593445, z: 0.7549473, w: 0}
+    value: {x: 1, y: 1, z: 1, w: 0.06511626}
   gain:
     overrideState: 1
-    value: {x: 1, y: 0.75064456, z: 0.95615965, w: 0}
+    value: {x: 1, y: 0.87897116, z: 0.9053347, w: 0.31627902}
   masterCurve:
     overrideState: 0
     value:
@@ -1444,7 +1416,6 @@ MonoBehaviour:
   - {fileID: 5845836167496097566}
   - {fileID: -2627033837412453208}
   - {fileID: -7155334560080244267}
-  - {fileID: -7887086920697529360}
   - {fileID: -2518794241681969905}
 --- !u!114 &5845836167496097566
 MonoBehaviour:
