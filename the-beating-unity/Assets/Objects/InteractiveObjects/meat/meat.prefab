@@ -158,6 +158,7 @@ MonoBehaviour:
   audioSource: {fileID: 1182142298130087601}
   _collider: {fileID: 7618854536954874073}
   _rigidbody: {fileID: 2659699200197384869}
+  pitchShiftExtremum: 0.15
 --- !u!137 &8532462181279727563
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -231,7 +232,7 @@ Cloth:
   m_UseTethers: 1
   m_UseGravity: 1
   m_Damping: 0.3
-  m_ExternalAcceleration: {x: 1.83, y: 0, z: 0}
+  m_ExternalAcceleration: {x: 0, y: 0, z: 0}
   m_RandomAcceleration: {x: 0, y: 0, z: 0}
   m_WorldVelocityScale: 0.5
   m_WorldAccelerationScale: 1
