@@ -138,7 +138,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
@@ -156,6 +156,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MeatInteractiveBehaviour
   audioSource: {fileID: 1182142298130087601}
+  _collider: {fileID: 7618854536954874073}
+  _rigidbody: {fileID: 2659699200197384869}
 --- !u!137 &8532462181279727563
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -306,7 +308,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 1
   m_Constraints: 0
