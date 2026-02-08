@@ -64,6 +64,6 @@ public class AxeToolController : MonoBehaviour
         {
             other.gameObject.GetComponent<IDamageable>().GetDamage();
         }
-       Debug.Log(other.gameObject.name);
+       //Debug.Log(other.gameObject.name);
     }
 }

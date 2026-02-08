@@ -18,7 +18,7 @@ public class TreeDamageable : MonoBehaviour, IDamageable
     void Death()
     {
         treeBehaviour.Death();
-        Debug.Log("Tree Destrioyed");
+        //Debug.Log("Tree Destrioyed");
     }
 
 }
