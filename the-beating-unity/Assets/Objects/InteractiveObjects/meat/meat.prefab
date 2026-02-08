@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 08fd70be8a20e9649a188f6b4007d833, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.31982
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 08fd70be8a20e9649a188f6b4007d833, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.023
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 08fd70be8a20e9649a188f6b4007d833, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.3096
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 08fd70be8a20e9649a188f6b4007d833, type: 3}
       propertyPath: m_LocalRotation.w
@@ -128,10 +128,10 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2298649296805211113}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 3c5d7c4b6fdc19e47ae57f54eefa71ff, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 393
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -228,7 +228,7 @@ Cloth:
   m_GameObject: {fileID: 2298649296805211113}
   m_Enabled: 1
   m_StretchingStiffness: 0.52
-  m_BendingStiffness: 0
+  m_BendingStiffness: 0.15
   m_UseTethers: 1
   m_UseGravity: 1
   m_Damping: 0.3
@@ -281,7 +281,7 @@ Cloth:
   m_SphereColliders: []
   m_SelfCollisionDistance: 0
   m_SelfCollisionStiffness: 0.2
-  m_SelfAndInterCollisionIndices: 
+  m_SelfAndInterCollisionIndices: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f00000010000000
   m_VirtualParticleWeights:
   - {x: 0.33333334, y: 0.33333334, z: 0.33333334}
   - {x: 0.6666667, y: 0.16666667, z: 0.16666667}
