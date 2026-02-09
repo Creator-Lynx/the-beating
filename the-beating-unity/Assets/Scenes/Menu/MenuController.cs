@@ -18,6 +18,7 @@ public class MenuController : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadSceneAsync(2);//loading screen
+        MusicThroughScenes.DestroyMenuMusic();
     }
 
     public void Exit()
