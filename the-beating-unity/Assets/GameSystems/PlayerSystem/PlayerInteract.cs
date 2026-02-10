@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class PlayerInteract : MonoBehaviour
@@ -6,6 +7,7 @@ public class PlayerInteract : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField] float raycastDistance = 3f;
     [SerializeField] LayerMask layerMask;
+    [SerializeField] InteractionHint interactionHint;
 
     
     void FixedUpdate()
@@ -19,13 +21,14 @@ public class PlayerInteract : MonoBehaviour
             {
                 interactivable = raycastHit.collider.GetComponent<IInteractivable>();
                 //call show hint
-                Debug.Log(interactivable.GetInteractionHint());
+                interactionHint.ShowHint(interactivable.GetInteractionHint());
             }
         }
         else 
         {
             interactivable = null;
             //call hide of hint
+            interactionHint.HideHint();
         }
         
     }
@@ -35,7 +38,8 @@ public class PlayerInteract : MonoBehaviour
     {
         if(interactInputAction.WasPressedThisFrame()) 
         //call interact of current interactivable if it is
-        if(interactivable != null) interactivable.Interact();
+        //if(interactivable != null) 
+        interactivable?.Interact();
     }
 
     InputAction interactInputAction;

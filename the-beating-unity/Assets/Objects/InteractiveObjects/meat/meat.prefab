@@ -115,6 +115,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 08fd70be8a20e9649a188f6b4007d833, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1182142298130087601}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 08fd70be8a20e9649a188f6b4007d833, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4980178308415424177}
   m_SourcePrefab: {fileID: 100100000, guid: 08fd70be8a20e9649a188f6b4007d833, type: 3}
 --- !u!1 &2298649296805211113 stripped
 GameObject:
@@ -157,6 +160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MeatInteractiveBehaviour
   audioSource: {fileID: 1182142298130087601}
   _collider: {fileID: 7618854536954874073}
+  _trigger: {fileID: 4980178308415424177}
   _rigidbody: {fileID: 2659699200197384869}
   pitchShiftExtremum: 0.15
 --- !u!137 &8532462181279727563
@@ -411,3 +415,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!135 &4980178308415424177
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2298649296805211113}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Radius: 0.005557043
+  m_Center: {x: 0, y: 0, z: 0}
