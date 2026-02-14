@@ -22,12 +22,31 @@ public class MeatInteractiveBehaviour : MonoBehaviour, IInteractivable
 
     public string GetInteractionHint()
     {
-        return "потрогать";
+        return "взять";
     }
 
     public void Interact()
     {
         audioSource.pitch = 1 + Random.Range(-1f, 1f) * pitchShiftExtremum;
         audioSource.Play();
+
+        if(HandResourceInventory.resourceInventory.TryToIncrementMeatCount())
+        {
+            PlayerGetMeat();
+        }
+        else
+        {
+            PlayerDontGetMeat();
+        }
+    }
+
+    void PlayerGetMeat()
+    {
+        
+    }
+
+    void PlayerDontGetMeat()
+    {
+        _rigidbody.AddTorque(Vector3.up, ForceMode.Impulse);
     }
 }
