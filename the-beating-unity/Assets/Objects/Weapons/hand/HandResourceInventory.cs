@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Runtime.CompilerServices;
+using Unity.Multiplayer.PlayMode;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
@@ -91,6 +92,11 @@ public class HandResourceInventory : MonoBehaviour
         int result = meatCount;
         meatCount = 0;
         animator.SetTrigger(resetTriggerId);
+        foreach(Transform tr in meatPositions)
+        {
+            if(tr.childCount > 0)
+            Destroy(tr.GetChild(0).gameObject);
+        }
         return result;
     }
 
