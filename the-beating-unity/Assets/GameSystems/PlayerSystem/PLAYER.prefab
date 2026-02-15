@@ -266,7 +266,7 @@ GameObject:
   - component: {fileID: 3839568383172135926}
   - component: {fileID: 6634420912999981079}
   m_Layer: 3
-  m_Name: CinemachineCamera
+  m_Name: CinemachineCamera(Interaction object)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1517,6 +1517,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ResourceInventory
   meatCount: 0
   maxMeatCount: 3
+  animator: {fileID: 2981816932449755124}
 --- !u!4 &2010089589595524769 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7f59a215a9675a348a46995460da60eb, type: 3}
