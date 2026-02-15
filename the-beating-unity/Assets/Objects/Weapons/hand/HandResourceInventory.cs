@@ -1,6 +1,8 @@
+using System.Collections;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class HandResourceInventory : MonoBehaviour
 {
@@ -50,10 +52,11 @@ public class HandResourceInventory : MonoBehaviour
         return false;
     }
 
-    public bool TryToIncrementMeatCount(Transform transform)
+    public bool TryToIncrementMeatCount(Transform meat)
     {
         if(meatCount < maxMeatCount)
         {
+            StartCoroutine(TranslateObjectToPos(meat, meatCount));
             meatCount++;
             animator.SetTrigger(interactTriggerId);
             return true;
@@ -61,7 +64,23 @@ public class HandResourceInventory : MonoBehaviour
         return false;
     }
 
-
+    IEnumerator TranslateObjectToPos(Transform meat, int posId)
+    {
+        yield return new WaitForSeconds(transitionDelay);
+        float timer = 0f;
+        meat.SetParent(meatPositions[posId]);
+        Vector3 startPos = meat.position;
+        Vector3 startScale = meat.localScale;
+        while(timer < transitionDuration)
+        {
+            meat.position = Vector3.Lerp(startPos, meatPositions[posId].position, timer/transitionDuration);
+            meat.localScale = Vector3.Lerp(startScale, meatPositions[posId].localScale, timer/transitionDuration);
+            yield return new WaitForEndOfFrame();
+            timer += Time.deltaTime;
+        }
+        meat.position = meatPositions[posId].position;
+        meat.localScale = meatPositions[posId].localScale;
+    }
 
     /// <summary>
     /// Clear player resource inventory. 

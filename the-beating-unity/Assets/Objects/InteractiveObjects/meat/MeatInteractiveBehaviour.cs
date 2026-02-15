@@ -29,7 +29,7 @@ public class MeatInteractiveBehaviour : MonoBehaviour, IInteractivable
     {
         
 
-        if(HandResourceInventory.resourceInventory.TryToIncrementMeatCount())
+        if(HandResourceInventory.resourceInventory.TryToIncrementMeatCount(transform))
         {
             PlayerGetMeat();
         }
@@ -46,6 +46,9 @@ public class MeatInteractiveBehaviour : MonoBehaviour, IInteractivable
         _rigidbody.useGravity = false;
         _rigidbody.isKinematic = true;
         _rigidbody.Sleep();
+        _rigidbody.interpolation = RigidbodyInterpolation.None;
+        GetComponent<Cloth>().enabled = false;
+        
 
         audioSourceTake.pitch = 1 + Random.Range(-1f, 1f) * pitchShiftExtremum;
         audioSourceTake.Play();
