@@ -2,15 +2,15 @@ using UnityEngine;
 
 public class MeatInteractiveBehaviour : MonoBehaviour, IInteractivable
 {
-    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioSource audioSourceMain, audioSourceTake;
     [SerializeField] Collider _collider, _trigger;
     [SerializeField] Rigidbody _rigidbody;
     [SerializeField] float pitchShiftExtremum = 0.1f;
 
     void OnCollisionEnter(Collision collision)
     {
-        audioSource.pitch = 1 + Random.Range(-1f, 1f) * pitchShiftExtremum;
-        audioSource.Play();
+        audioSourceMain.pitch = 1 + Random.Range(-1f, 1f) * pitchShiftExtremum;
+        audioSourceMain.Play();
     }
 
     public void EnableDropState()
@@ -27,8 +27,7 @@ public class MeatInteractiveBehaviour : MonoBehaviour, IInteractivable
 
     public void Interact()
     {
-        audioSource.pitch = 1 + Random.Range(-1f, 1f) * pitchShiftExtremum;
-        audioSource.Play();
+        
 
         if(HandResourceInventory.resourceInventory.TryToIncrementMeatCount())
         {
@@ -42,11 +41,20 @@ public class MeatInteractiveBehaviour : MonoBehaviour, IInteractivable
 
     void PlayerGetMeat()
     {
-        
+        _collider.enabled = false;
+        _trigger.enabled = false;
+        _rigidbody.useGravity = false;
+        _rigidbody.isKinematic = true;
+        _rigidbody.Sleep();
+
+        audioSourceTake.pitch = 1 + Random.Range(-1f, 1f) * pitchShiftExtremum;
+        audioSourceTake.Play();
     }
 
     void PlayerDontGetMeat()
     {
         _rigidbody.AddTorque(Vector3.up, ForceMode.Impulse);
+        audioSourceMain.pitch = 1 + Random.Range(-1f, 1f) * pitchShiftExtremum;
+        audioSourceMain.Play();
     }
 }
