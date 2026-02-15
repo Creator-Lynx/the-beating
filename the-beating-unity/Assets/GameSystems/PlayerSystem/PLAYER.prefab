@@ -254,6 +254,37 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &5337641698395014430
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5860384776297849191}
+  m_Layer: 0
+  m_Name: MeatPosition0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5860384776297849191
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5337641698395014430}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.84042925, y: 0.39493522, z: 0.36540416, w: 0.06469003}
+  m_LocalPosition: {x: -0.0018, y: 0.00307, z: 0.0022}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 610377986256518855}
+  m_LocalEulerAnglesHint: {x: -23.413, y: -142.148, z: 222.212}
 --- !u!1 &5601321439186221532
 GameObject:
   m_ObjectHideFlags: 0
@@ -542,6 +573,68 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerToolsOperator
   tools:
   - {fileID: 242629750369332506}
+--- !u!1 &6084390211803425292
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3632203376580325001}
+  m_Layer: 0
+  m_Name: MeatPosition1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3632203376580325001
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6084390211803425292}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.91551733, y: -0.30006075, z: 0.19686547, w: 0.18175678}
+  m_LocalPosition: {x: 0.0005, y: 0.00392, z: 0.00083}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 610377986256518855}
+  m_LocalEulerAnglesHint: {x: 26.804, y: 163.641, z: -507.63}
+--- !u!1 &6443114850805801914
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3036552976401255484}
+  m_Layer: 0
+  m_Name: MeatPosition2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3036552976401255484
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6443114850805801914}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.6356289, y: 0.053603828, z: 0.013726935, w: 0.7700092}
+  m_LocalPosition: {x: -0.00028, y: 0.00468, z: 0.00194}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 610377986256518855}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7484182487907271302
 GameObject:
   m_ObjectHideFlags: 0
@@ -1467,7 +1560,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1447769991129175949, guid: 7f59a215a9675a348a46995460da60eb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5860384776297849191}
+    - targetCorrespondingSourceObject: {fileID: 1447769991129175949, guid: 7f59a215a9675a348a46995460da60eb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3632203376580325001}
+    - targetCorrespondingSourceObject: {fileID: 1447769991129175949, guid: 7f59a215a9675a348a46995460da60eb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3036552976401255484}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7f59a215a9675a348a46995460da60eb, type: 3}
       insertIndex: -1
@@ -1476,6 +1578,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 5600411656871729292}
   m_SourcePrefab: {fileID: 100100000, guid: 7f59a215a9675a348a46995460da60eb, type: 3}
+--- !u!4 &610377986256518855 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1447769991129175949, guid: 7f59a215a9675a348a46995460da60eb, type: 3}
+  m_PrefabInstance: {fileID: 2049134160608504138}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1202062494931948571 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7f59a215a9675a348a46995460da60eb, type: 3}
@@ -1518,6 +1625,15 @@ MonoBehaviour:
   meatCount: 0
   maxMeatCount: 3
   animator: {fileID: 2981816932449755124}
+  handInteractionTriggerName: Grab
+  handWalkBoolName: IsWalk
+  handResetTriggerName: SetEmpty
+  meatPositions:
+  - {fileID: 5860384776297849191}
+  - {fileID: 3632203376580325001}
+  - {fileID: 3036552976401255484}
+  transitionDelay: 0.05
+  transitionDuration: 0.4
 --- !u!4 &2010089589595524769 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7f59a215a9675a348a46995460da60eb, type: 3}
