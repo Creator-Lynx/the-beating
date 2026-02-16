@@ -176,7 +176,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!1 &3162567310879290753
@@ -742,6 +742,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e2e7925c06f0d04093c94ed5f2e65b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
+  haveMeat: 0
   wholeTree: {fileID: 8511311153646756527}
   bottomTree: {fileID: 8975826109495897626}
   topTree: {fileID: 2482487571745228346}
+  meats: []
