@@ -1738,12 +1738,12 @@ MonoBehaviour:
     m_Bits: 64
   stopNaNPropagation: 1
   finalBlitToCameraTarget: 0
-  antialiasingMode: 0
+  antialiasingMode: 3
   temporalAntialiasing:
-    jitterSpread: 0.75
-    sharpness: 0.25
-    stationaryBlending: 0.95
-    motionBlending: 0.85
+    jitterSpread: 0.845
+    sharpness: 0
+    stationaryBlending: 0.99
+    motionBlending: 0.99
   subpixelMorphologicalAntialiasing:
     quality: 2
   fastApproximateAntialiasing:
@@ -2776,7 +2776,7 @@ MonoBehaviour:
   temporalAntialiasing:
     jitterSpread: 0.75
     sharpness: 0.25
-    stationaryBlending: 0.95
+    stationaryBlending: 0.836
     motionBlending: 0.85
   subpixelMorphologicalAntialiasing:
     quality: 2
