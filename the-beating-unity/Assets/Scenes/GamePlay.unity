@@ -2100,6 +2100,10 @@ PrefabInstance:
       propertyPath: EmissionModule.enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1945332394209664859, guid: 37217a10270222a4f82728259527dc43, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1740247581}
     - target: {fileID: 3721314303188008030, guid: 37217a10270222a4f82728259527dc43, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.2109
@@ -2124,9 +2128,17 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.00113
       objectReference: {fileID: 0}
+    - target: {fileID: 7481459367403112308, guid: 37217a10270222a4f82728259527dc43, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8639876682042751371, guid: 37217a10270222a4f82728259527dc43, type: 3}
       propertyPath: m_Name
       value: test_heart
+      objectReference: {fileID: 0}
+    - target: {fileID: 8639876682042751371, guid: 37217a10270222a4f82728259527dc43, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8983787063252280113, guid: 37217a10270222a4f82728259527dc43, type: 3}
       propertyPath: m_LocalScale.x

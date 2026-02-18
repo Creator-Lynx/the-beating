@@ -112,7 +112,7 @@ public class HandResourceInventory : MonoBehaviour
     void Update()
     {
         //test call of crearing resources
-        if(Keyboard.current.tKey.wasPressedThisFrame) ResourceTransfer();
+        //if(Keyboard.current.tKey.wasPressedThisFrame) ResourceTransfer();
         //operate walk animation
         if(Time.frameCount % 4 == 0)
         animator.SetBool(walkBoolId, movingAction.IsInProgress());  
