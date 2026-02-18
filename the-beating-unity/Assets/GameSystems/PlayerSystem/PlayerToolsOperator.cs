@@ -1,3 +1,4 @@
+using System.Runtime.Serialization.Formatters;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -21,6 +22,7 @@ public class PlayerToolsOperator : MonoBehaviour
     void CallTool(PlayerTools index)
     {
         if (!haveTools[(int)index]) return; // do nothing if player dont have tools
+        if (tools[(int)index]?.activeSelf == true) return;
 
         for (int i = 0; i < tools.Length; i++)
         {
