@@ -3054,6 +3054,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4873260943094407300, guid: 37217a10270222a4f82728259527dc43, type: 3}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 8639876682042751371, guid: 37217a10270222a4f82728259527dc43, type: 3}
       propertyPath: m_Name
       value: test_heart
