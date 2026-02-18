@@ -2084,6 +2084,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4873260943094407300, guid: 37217a10270222a4f82728259527dc43, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: d14605ee80e2db441baca1d2910a8408, type: 2}
+    - target: {fileID: 5052330589507336307, guid: 37217a10270222a4f82728259527dc43, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: d14605ee80e2db441baca1d2910a8408, type: 2}
     - target: {fileID: 8639876682042751371, guid: 37217a10270222a4f82728259527dc43, type: 3}
       propertyPath: m_Name
       value: test_heart
