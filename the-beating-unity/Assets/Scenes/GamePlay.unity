@@ -1936,7 +1936,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 1.356248e-17, z: NaN, w: 2.2420807}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -2084,6 +2084,46 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1111192673191556647, guid: 37217a10270222a4f82728259527dc43, type: 3}
+      propertyPath: LightsModule.light
+      value: 
+      objectReference: {fileID: 618072427}
+    - target: {fileID: 1111192673191556647, guid: 37217a10270222a4f82728259527dc43, type: 3}
+      propertyPath: LightsModule.ratio
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 1111192673191556647, guid: 37217a10270222a4f82728259527dc43, type: 3}
+      propertyPath: LightsModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1111192673191556647, guid: 37217a10270222a4f82728259527dc43, type: 3}
+      propertyPath: EmissionModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3721314303188008030, guid: 37217a10270222a4f82728259527dc43, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.2109
+      objectReference: {fileID: 0}
+    - target: {fileID: 3721314303188008030, guid: 37217a10270222a4f82728259527dc43, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.2109
+      objectReference: {fileID: 0}
+    - target: {fileID: 3721314303188008030, guid: 37217a10270222a4f82728259527dc43, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.2109
+      objectReference: {fileID: 0}
+    - target: {fileID: 3721314303188008030, guid: 37217a10270222a4f82728259527dc43, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3721314303188008030, guid: 37217a10270222a4f82728259527dc43, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3721314303188008030, guid: 37217a10270222a4f82728259527dc43, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.00113
+      objectReference: {fileID: 0}
     - target: {fileID: 8639876682042751371, guid: 37217a10270222a4f82728259527dc43, type: 3}
       propertyPath: m_Name
       value: test_heart
@@ -2102,15 +2142,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8983787063252280113, guid: 37217a10270222a4f82728259527dc43, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.71
+      value: -10.645
       objectReference: {fileID: 0}
     - target: {fileID: 8983787063252280113, guid: 37217a10270222a4f82728259527dc43, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.259
+      value: 1.422
       objectReference: {fileID: 0}
     - target: {fileID: 8983787063252280113, guid: 37217a10270222a4f82728259527dc43, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 15.04
+      value: 14.661
       objectReference: {fileID: 0}
     - target: {fileID: 8983787063252280113, guid: 37217a10270222a4f82728259527dc43, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2145,6 +2185,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37217a10270222a4f82728259527dc43, type: 3}
+--- !u!114 &662047599 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5939173967699680456, guid: 37217a10270222a4f82728259527dc43, type: 3}
+  m_PrefabInstance: {fileID: 662047598}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75b4497496b4e804185c224e48337808, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HeartBehaviour
 --- !u!1001 &668454337
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3034,6 +3085,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.12400001
       objectReference: {fileID: 0}
+    - target: {fileID: 5600411656871729292, guid: ad519ec3c30210245bb28a385f0e8870, type: 3}
+      propertyPath: FirstMeatTakenEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 662047599}
     - target: {fileID: 5601321439186221532, guid: ad519ec3c30210245bb28a385f0e8870, type: 3}
       propertyPath: m_Name
       value: CinemachineCamera(Interaction)

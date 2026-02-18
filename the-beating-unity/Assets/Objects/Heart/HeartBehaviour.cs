@@ -1,16 +1,36 @@
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class HeartBehaviour : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    [SerializeField]Animator _animator;
+    [SerializeField] AudioSource _hungrySound;
+    [SerializeField] AudioMixerSnapshot defaultSnapshot, hungrySnapshot;
+    int _hungryBoolName;
+
     void Start()
+    {
+        _hungryBoolName = Animator.StringToHash("Hungry");
+    }
+
+
+    void Update()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetHungryState()
     {
-        
+        _animator.SetBool(_hungryBoolName, true);
+        _hungrySound.Play();
+        hungrySnapshot.TransitionTo(1f);
+    }
+
+    void SetUsualState()
+    {
+        _animator.SetBool(_hungryBoolName, false);
+        _hungrySound.Stop();
+        defaultSnapshot.TransitionTo(1f);
     }
 }
