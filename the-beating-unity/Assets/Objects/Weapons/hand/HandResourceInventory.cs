@@ -2,6 +2,7 @@ using System.Collections;
 using System.Runtime.CompilerServices;
 using Unity.Multiplayer.PlayMode;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
@@ -32,6 +33,12 @@ public class HandResourceInventory : MonoBehaviour
     [SerializeField] float transitionDuration = 0.4f;
 
 
+    [Space(20)]
+    [Header("To know when have a meat")]
+    [SerializeField]
+    UnityEvent FirstMeatTakenEvent;
+
+
     void Start()
     {
         resourceInventory = this;
@@ -46,6 +53,7 @@ public class HandResourceInventory : MonoBehaviour
     {
         if(meatCount < maxMeatCount)
         {
+            if (meatCount == 0) FirstMeatTakenEvent.Invoke();
             meatCount++;
             animator.SetTrigger(interactTriggerId);
             return true;
@@ -57,6 +65,7 @@ public class HandResourceInventory : MonoBehaviour
     {
         if(meatCount < maxMeatCount)
         {
+            if (meatCount == 0) FirstMeatTakenEvent.Invoke();
             StartCoroutine(TranslateObjectToPos(meat, meatCount));
             meatCount++;
             animator.SetTrigger(interactTriggerId);

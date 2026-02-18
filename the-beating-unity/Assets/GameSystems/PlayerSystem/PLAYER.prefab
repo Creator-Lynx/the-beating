@@ -1632,8 +1632,8 @@ MonoBehaviour:
   - {fileID: 5860384776297849191}
   - {fileID: 3632203376580325001}
   - {fileID: 3036552976401255484}
-  transitionDelay: 0.2
-  transitionDuration: 0.91
+  transitionDelay: 0.25
+  transitionDuration: 0.2
 --- !u!4 &2010089589595524769 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7f59a215a9675a348a46995460da60eb, type: 3}
