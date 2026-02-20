@@ -5230,7 +5230,7 @@ PrefabInstance:
       addedObject: {fileID: 5939173967699680456}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 533fa3b147756b44eacc8d2615a76599, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 845838068723681690}
+      addedObject: {fileID: 5771899266515023548}
   m_SourcePrefab: {fileID: 100100000, guid: 533fa3b147756b44eacc8d2615a76599, type: 3}
 --- !u!1 &8639876682042751371 stripped
 GameObject:
@@ -5524,8 +5524,8 @@ MonoBehaviour:
   defaultSnapshot: {fileID: 24500006, guid: d14605ee80e2db441baca1d2910a8408, type: 2}
   hungrySnapshot: {fileID: -8209086769420459894, guid: d14605ee80e2db441baca1d2910a8408, type: 2}
   text: {fileID: 600719426772280195}
---- !u!135 &845838068723681690
-SphereCollider:
+--- !u!136 &5771899266515023548
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5542,9 +5542,11 @@ SphereCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.0053645787
-  m_Center: {x: -0.00069750403, y: 0.00022092229, z: 0.00466292}
+  serializedVersion: 2
+  m_Radius: 0.004644778
+  m_Height: 0.016775629
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0.005853577}
 --- !u!4 &8983787063252280113 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 533fa3b147756b44eacc8d2615a76599, type: 3}
