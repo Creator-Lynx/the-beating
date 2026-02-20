@@ -954,6 +954,7 @@ GameObject:
   - component: {fileID: 300321001}
   - component: {fileID: 300321002}
   - component: {fileID: 300321003}
+  - component: {fileID: 300321004}
   m_Layer: 8
   m_Name: CinemachineCamera
   m_TagString: Untagged
@@ -1049,6 +1050,21 @@ MonoBehaviour:
   AmplitudeGain: 1
   FrequencyGain: 0.5
   m_NoiseOffsets: {x: -920.68933, y: 895.0613, z: -473.54712}
+--- !u!114 &300321004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300320999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b268bc25f1bbdf4aac3d3961cc743df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LiveObjectShifterDialog
+  shiftVector: {x: 0.5, y: 0.5}
+  smoothTime: 0.25
+  defaultShift: {x: 0, y: 0}
 --- !u!1001 &340183811
 PrefabInstance:
   m_ObjectHideFlags: 0
