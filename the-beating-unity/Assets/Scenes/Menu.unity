@@ -193,6 +193,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90bea6d4e1e6ce74da6b165b40082d0d, type: 3}
+--- !u!4 &48335307 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3421803349292626305, guid: 37217a10270222a4f82728259527dc43, type: 3}
+  m_PrefabInstance: {fileID: 1194695918271611203}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &62821424 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8100476325545086760, guid: 90bea6d4e1e6ce74da6b165b40082d0d, type: 3}
@@ -1552,7 +1557,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.05640857, y: 0, z: 0, w: 0.9984078}
+  m_LocalRotation: {x: 0.053262964, y: 0.00090974814, z: -0.000048524787, w: 0.99858016}
   m_LocalPosition: {x: 0, y: 1, z: -4.774}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2448,7 +2453,7 @@ MonoBehaviour:
   m_StreamingVersion: 20241001
   m_LegacyPriority: 0
   Target:
-    TrackingTarget: {fileID: 0}
+    TrackingTarget: {fileID: 48335307}
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
@@ -2479,7 +2484,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1581549417}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.05640857, y: 0, z: 0, w: 0.9984078}
+  m_LocalRotation: {x: 0.053262964, y: 0.00090974814, z: -0.000048524787, w: 0.99858016}
   m_LocalPosition: {x: 0, y: 1, z: -4.774}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
