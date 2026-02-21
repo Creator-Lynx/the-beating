@@ -956,7 +956,7 @@ GameObject:
   - component: {fileID: 300321003}
   - component: {fileID: 300321004}
   m_Layer: 8
-  m_Name: CinemachineCamera
+  m_Name: HeartCinemachineCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -971,7 +971,7 @@ Transform:
   m_GameObject: {fileID: 300320999}
   serializedVersion: 2
   m_LocalRotation: {x: -0.6983194, y: -0.22421245, z: -0.2051662, w: -0.648063}
-  m_LocalPosition: {x: -0.00746, y: 0.01152, z: 0.00487}
+  m_LocalPosition: {x: -0.007460004, y: 0.011520004, z: 0.0048700003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1064,7 +1064,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LiveObjectShifterDialog
   shiftVector: {x: 0.5, y: 0.5}
   smoothTime: 0.25
-  defaultShift: {x: 0, y: 0}
+  defaultShift: {x: 0, y: 0, z: 0}
 --- !u!1001 &340183811
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2507,7 +2507,7 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8983787063252280113, guid: 37217a10270222a4f82728259527dc43, type: 3}
-      insertIndex: 2
+      insertIndex: -1
       addedObject: {fileID: 300321000}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37217a10270222a4f82728259527dc43, type: 3}
