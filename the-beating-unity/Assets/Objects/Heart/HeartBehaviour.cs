@@ -11,6 +11,8 @@ public class HeartBehaviour : MonoBehaviour, IInteractivable
     bool isHungryState = false;
     [SerializeField] TMPro.TextMeshProUGUI text;
 
+    [SerializeField] DialogVisualizer dialogVisualizer;
+
     int ConsumedMeatCount = 0;
 
     void Start()
@@ -45,6 +47,7 @@ public class HeartBehaviour : MonoBehaviour, IInteractivable
         SetUsualState();
         ConsumedMeatCount += HandResourceInventory.resourceInventory.ResourceTransfer();
         text.text = ConsumedMeatCount.ToString();
+        dialogVisualizer.EnterDialog();
     }
 
     public string GetInteractionHint()
