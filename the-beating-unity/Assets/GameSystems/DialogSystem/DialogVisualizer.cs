@@ -7,12 +7,18 @@ public class DialogVisualizer : MonoBehaviour
     [SerializeField] CinemachineCamera cinemachineCamera;
     [SerializeField] LiveObjectShifterDialog cameraShifter;
 
+  
+
     public bool dialogState = false;
     public void EnterDialog()
     {
         cinemachineCamera.enabled = true;
         cameraShifter.enabled = true;
         StartCoroutine(DialogStateDelay());
+        
+
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
     }
 
     public void ExitDialog()
@@ -20,8 +26,11 @@ public class DialogVisualizer : MonoBehaviour
         cinemachineCamera.enabled = false;
         cameraShifter.enabled = false;
         dialogState = false;
-    }
+        StartCoroutine(PlayerPlayDelay());
 
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
 
     //temporary handle
     void Update()
@@ -33,7 +42,14 @@ public class DialogVisualizer : MonoBehaviour
 
     IEnumerator DialogStateDelay()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.2f);
         dialogState = true;
+        PlayerPauseSystem.Pause();
+    }
+
+    IEnumerator PlayerPlayDelay()
+    {
+        yield return new WaitForSeconds(0.5f);
+        PlayerPauseSystem.Play();
     }
 }

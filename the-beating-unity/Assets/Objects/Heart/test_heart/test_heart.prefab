@@ -5432,6 +5432,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogVisualizer
   cinemachineCamera: {fileID: 9089286126285241946}
   cameraShifter: {fileID: 6619305898629111182}
+  dialogState: 0
 --- !u!95 &4127627644424776658
 Animator:
   serializedVersion: 7
@@ -5444,7 +5445,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 7de027470ceecad4c9fe6280747a1ff0, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0

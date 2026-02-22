@@ -391,6 +391,7 @@ GameObject:
   - component: {fileID: 7184045983731175855}
   - component: {fileID: 1240015071223865948}
   - component: {fileID: 6481877061320024416}
+  - component: {fileID: 39966082161635547}
   m_Layer: 0
   m_Name: PLAYER
   m_TagString: Untagged
@@ -525,6 +526,22 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   SecondToExtremeVolume: 0.2
+--- !u!114 &39966082161635547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5605130443918369944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d21acbf83cda4943849b24d9e0ad280, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerPauseSystem
+  _playerController: {fileID: 1240015071223865948}
+  _playerTools: {fileID: 5942702016842428529}
+  _playerSoundsOperator: {fileID: 6481877061320024416}
+  gameplayCanvas: {fileID: 0}
 --- !u!1 &5942702016842428529
 GameObject:
   m_ObjectHideFlags: 0
