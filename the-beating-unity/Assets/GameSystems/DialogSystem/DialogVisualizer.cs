@@ -7,6 +7,10 @@ public class DialogVisualizer : MonoBehaviour
     [SerializeField] CinemachineCamera cinemachineCamera;
     [SerializeField] LiveObjectShifterDialog cameraShifter;
 
+    [SerializeField] AnimationCurve _fogDensityChanging;
+    [SerializeField] AnimationCurve _skyExposureChanging;
+    [SerializeField] Material skybox;
+    [SerializeField] float timeToFogChange = 1f;
   
 
     public bool dialogState = false;
@@ -19,6 +23,8 @@ public class DialogVisualizer : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
+
+        StartCoroutine(IncreaseFogDensity());
     }
 
     public void ExitDialog()
@@ -30,6 +36,8 @@ public class DialogVisualizer : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        StartCoroutine(DecreaseFogDensity());
     }
 
     //temporary handle
@@ -51,5 +59,33 @@ public class DialogVisualizer : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         PlayerPauseSystem.Play();
+    }
+
+    IEnumerator IncreaseFogDensity()
+    {
+        float timer = 0f;
+        while (timer < timeToFogChange)
+        {
+            yield return new WaitForEndOfFrame();
+            RenderSettings.fogDensity = _fogDensityChanging.Evaluate(timer/timeToFogChange);
+            skybox.SetFloat("_Exposure", _skyExposureChanging.Evaluate(timer/timeToFogChange) * 0.16f);
+            DynamicGI.UpdateEnvironment(); 
+            //skybox.color = _skyExposureChanging.Evaluate(timer/timeToFogChange) * Color.white;
+            timer += Time.deltaTime;
+        }
+    }
+
+    IEnumerator DecreaseFogDensity()
+    {
+        float timer = 0f;
+        while (timer < timeToFogChange)
+        {
+            yield return new WaitForEndOfFrame();
+            RenderSettings.fogDensity = _fogDensityChanging.Evaluate(1 - timer/timeToFogChange);
+            skybox.SetFloat("_Exposure", _skyExposureChanging.Evaluate(1 - timer/timeToFogChange) * 0.16f);
+            DynamicGI.UpdateEnvironment(); 
+            //skybox. = _skyExposureChanging.Evaluate(1 - timer/timeToFogChange) * Color.white;
+            timer += Time.deltaTime;
+        }
     }
 }
