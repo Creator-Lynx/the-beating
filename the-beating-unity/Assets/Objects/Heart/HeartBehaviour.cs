@@ -9,7 +9,6 @@ public class HeartBehaviour : MonoBehaviour, IInteractivable
     [SerializeField] AudioMixerSnapshot defaultSnapshot, hungrySnapshot;
     int _hungryBoolName;
     bool isHungryState = false;
-    [SerializeField] TMPro.TextMeshProUGUI text;
 
     [SerializeField] DialogVisualizer dialogVisualizer;
 
@@ -46,7 +45,6 @@ public class HeartBehaviour : MonoBehaviour, IInteractivable
     {
         SetUsualState();
         ConsumedMeatCount += HandResourceInventory.resourceInventory.ResourceTransfer();
-        text.text = ConsumedMeatCount.ToString();
         dialogVisualizer.EnterDialog();
     }
 
