@@ -5416,7 +5416,6 @@ MonoBehaviour:
   _hungrySound: {fileID: 5052330589507336307}
   defaultSnapshot: {fileID: 24500006, guid: d14605ee80e2db441baca1d2910a8408, type: 2}
   hungrySnapshot: {fileID: -8209086769420459894, guid: d14605ee80e2db441baca1d2910a8408, type: 2}
-  text: {fileID: 600719426772280195}
   dialogVisualizer: {fileID: 1547627931451828034}
 --- !u!114 &1547627931451828034
 MonoBehaviour:
@@ -5465,6 +5464,48 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  _fogDensityChangingOut:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.09
+      inSlope: 0.12296066
+      outSlope: 0.12296066
+      tangentMode: 0
+      weightedMode: 2
+      inWeight: 0
+      outWeight: 0.86975634
+    - serializedVersion: 3
+      time: 0.6855699
+      value: 0.63081986
+      inSlope: 0.03349773
+      outSlope: 0.03349773
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.05765058
+      outWeight: 0.097446166
+    - serializedVersion: 3
+      time: 0.81525254
+      value: 0.62545747
+      inSlope: -0.109826714
+      outSlope: -0.109826714
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.28923035
+      outWeight: 0.25103307
+    - serializedVersion: 3
+      time: 1
+      value: 0.3
+      inSlope: -0.030177062
+      outSlope: -0.030177062
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.49931154
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   _skyExposureChanging:
     serializedVersion: 2
     m_Curve:
@@ -5490,7 +5531,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   skybox: {fileID: 2100000, guid: 19a4a2ad3912e8c499d8b5f03ebbb7ee, type: 2}
-  timeToFogChange: 1
+  timeToFogChange: 2
   dialogState: 0
 --- !u!95 &4127627644424776658
 Animator:

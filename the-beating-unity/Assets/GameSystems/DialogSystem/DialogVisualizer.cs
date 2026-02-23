@@ -8,6 +8,7 @@ public class DialogVisualizer : MonoBehaviour
     [SerializeField] LiveObjectShifterDialog cameraShifter;
 
     [SerializeField] AnimationCurve _fogDensityChanging;
+    [SerializeField] AnimationCurve _fogDensityChangingOut;
     [SerializeField] AnimationCurve _skyExposureChanging;
     [SerializeField] Material skybox;
     [SerializeField] float timeToFogChange = 1f;
@@ -81,7 +82,7 @@ public class DialogVisualizer : MonoBehaviour
         while (timer < timeToFogChange)
         {
             yield return new WaitForEndOfFrame();
-            RenderSettings.fogDensity = _fogDensityChanging.Evaluate(1 - timer/timeToFogChange);
+            RenderSettings.fogDensity = _fogDensityChangingOut.Evaluate(1 - timer/timeToFogChange);
             skybox.SetFloat("_Exposure", _skyExposureChanging.Evaluate(1 - timer/timeToFogChange) * 0.16f);
             DynamicGI.UpdateEnvironment(); 
             //skybox. = _skyExposureChanging.Evaluate(1 - timer/timeToFogChange) * Color.white;
