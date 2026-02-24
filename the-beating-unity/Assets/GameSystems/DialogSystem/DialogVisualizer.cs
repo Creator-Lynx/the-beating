@@ -6,19 +6,22 @@ public class DialogVisualizer : MonoBehaviour
 {
     [SerializeField] CinemachineCamera cinemachineCamera;
     [SerializeField] LiveObjectShifterDialog cameraShifter;
+    [SerializeField] Canvas dialogCanvas;
 
     [SerializeField] AnimationCurve _fogDensityChanging;
     [SerializeField] AnimationCurve _fogDensityChangingOut;
     [SerializeField] AnimationCurve _skyExposureChanging;
     [SerializeField] Material skybox;
     [SerializeField] float timeToFogChange = 1f;
-  
+
 
     public bool dialogState = false;
     public void EnterDialog()
     {
         cinemachineCamera.enabled = true;
         cameraShifter.enabled = true;
+        dialogCanvas.enabled = true;
+        
         StartCoroutine(DialogStateDelay());
         
 
@@ -32,6 +35,8 @@ public class DialogVisualizer : MonoBehaviour
     {
         cinemachineCamera.enabled = false;
         cameraShifter.enabled = false;
+        dialogCanvas.enabled = false;
+
         dialogState = false;
         StartCoroutine(PlayerPlayDelay());
 
