@@ -14,6 +14,8 @@
 /[Uu]ser[Ss]ettings/
 /References_for_visual_design/
 *.log
+# temporary ignoring skybox cause its regulary changing when testing
+/Assets/Scenes/GamePlay/Skybox.mat
 
 # By default unity supports Blender asset imports, *.blend1 blender files do not need to be commited to version control.
 *.blend1
