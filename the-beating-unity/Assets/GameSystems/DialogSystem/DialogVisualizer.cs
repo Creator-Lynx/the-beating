@@ -6,7 +6,9 @@ public class DialogVisualizer : MonoBehaviour
 {
     [SerializeField] CinemachineCamera cinemachineCamera;
     [SerializeField] LiveObjectShifterDialog cameraShifter;
-    [SerializeField] Canvas dialogCanvas;
+    [SerializeField] Animator _dialogCanvasAnimator;
+    [SerializeField] string _canvasOnTriggerName = "Show", _canvasOffTriggerName = "Hide";
+    int _canvasOnTrigger, _canvasOffTrigger;
 
     [SerializeField] AnimationCurve _fogDensityChanging;
     [SerializeField] AnimationCurve _fogDensityChangingOut;
@@ -15,12 +17,18 @@ public class DialogVisualizer : MonoBehaviour
     [SerializeField] float timeToFogChange = 1f;
 
 
+    void Start()
+    {
+        _canvasOnTrigger = Animator.StringToHash(_canvasOnTriggerName);
+        _canvasOffTrigger = Animator.StringToHash(_canvasOffTriggerName);
+    }
+
     public bool dialogState = false;
     public void EnterDialog()
     {
         cinemachineCamera.enabled = true;
         cameraShifter.enabled = true;
-        dialogCanvas.enabled = true;
+        _dialogCanvasAnimator.SetTrigger(_canvasOnTrigger);
         
         StartCoroutine(DialogStateDelay());
         
@@ -35,7 +43,7 @@ public class DialogVisualizer : MonoBehaviour
     {
         cinemachineCamera.enabled = false;
         cameraShifter.enabled = false;
-        dialogCanvas.enabled = false;
+        _dialogCanvasAnimator.SetTrigger(_canvasOffTrigger);
 
         dialogState = false;
         StartCoroutine(PlayerPlayDelay());
