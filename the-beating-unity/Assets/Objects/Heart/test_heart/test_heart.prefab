@@ -412,6 +412,7 @@ GameObject:
   - component: {fileID: 7166652337704018475}
   - component: {fileID: 4818324604787374684}
   - component: {fileID: 6619305898629111182}
+  - component: {fileID: 8647604318240585577}
   m_Layer: 8
   m_Name: HeartCinemachineCamera
   m_TagString: Untagged
@@ -523,6 +524,23 @@ MonoBehaviour:
   shiftVector: {x: 0.5, y: 0.5}
   smoothTime: 0.25
   defaultShift: {x: 0, y: 0, z: 0}
+--- !u!114 &8647604318240585577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5580926896069613821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 729aad4491e915a41bda2b8325cf757a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachinePostProcessing
+  Weight: 1
+  FocusTracking: 0
+  FocusTarget: {fileID: 0}
+  FocusOffset: 0
+  Profile: {fileID: 11400000, guid: 54d3766b5c66bc6428e0b0ad7540a7b2, type: 2}
 --- !u!1 &5739251391402705442
 GameObject:
   m_ObjectHideFlags: 0
