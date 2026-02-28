@@ -2283,10 +2283,6 @@ PrefabInstance:
       propertyPath: EmissionModule.enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1188193575521564256, guid: 37217a10270222a4f82728259527dc43, type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1547627931451828034, guid: 37217a10270222a4f82728259527dc43, type: 3}
       propertyPath: dialogCanvas
       value: 
@@ -2318,14 +2314,6 @@ PrefabInstance:
     - target: {fileID: 3721314303188008030, guid: 37217a10270222a4f82728259527dc43, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.00113
-      objectReference: {fileID: 0}
-    - target: {fileID: 4039730239072949554, guid: 37217a10270222a4f82728259527dc43, type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6478950468199275252, guid: 37217a10270222a4f82728259527dc43, type: 3}
-      propertyPath: m_fontColor.a
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6478950468199275252, guid: 37217a10270222a4f82728259527dc43, type: 3}
       propertyPath: m_fontColor32.rgba
