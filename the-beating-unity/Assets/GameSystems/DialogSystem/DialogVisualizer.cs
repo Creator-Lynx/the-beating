@@ -58,7 +58,7 @@ public class DialogVisualizer : MonoBehaviour
     void Update()
     {
         if (dialogState) 
-            if (UnityEngine.InputSystem.Keyboard.current.anyKey.wasPressedThisFrame) 
+            if (UnityEngine.InputSystem.Keyboard.current.eKey.wasPressedThisFrame) 
                 ExitDialog();
     }
 

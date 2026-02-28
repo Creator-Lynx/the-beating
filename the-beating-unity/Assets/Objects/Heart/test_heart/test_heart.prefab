@@ -536,6 +536,7 @@ GameObject:
   - component: {fileID: 3787997588670627775}
   - component: {fileID: 5976355821878786876}
   - component: {fileID: 1088087728943050269}
+  - component: {fileID: 2919276155268515172}
   m_Layer: 5
   m_Name: DialogCanvas
   m_TagString: Untagged
@@ -649,6 +650,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2919276155268515172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5739251391402705442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c190f49d29f243a429abf620a79687c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LiveDialogCanvasShifter
+  shiftVector: {x: -0.0002, y: -0.0002}
+  smoothTime: 0.1
+  defaultShift: {x: 0, y: 0, z: 0}
+  motherObjectToGetScale: {fileID: 8983787063252280113}
 --- !u!1 &6472117499407375966
 GameObject:
   m_ObjectHideFlags: 0
