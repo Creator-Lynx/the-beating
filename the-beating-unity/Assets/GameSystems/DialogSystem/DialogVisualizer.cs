@@ -1,6 +1,7 @@
 using System.Collections;
 using Unity.Cinemachine;
 using UnityEngine;
+using TMPro;
 
 public class DialogVisualizer : MonoBehaviour
 {
@@ -15,6 +16,12 @@ public class DialogVisualizer : MonoBehaviour
     [SerializeField] AnimationCurve _skyExposureChanging;
     [SerializeField] Material skybox;
     [SerializeField] float timeToFogChange = 1f;
+
+    [Space(30)]
+    [Header("Print modification")]
+    [SerializeField] TextMeshProUGUI textMesh;
+    [SerializeField] float timeToPrintSymbol = 0.05f;
+    [SerializeField] float timeRandomRangeToPrint = 0.02f;
 
 
     void Start()
@@ -60,6 +67,9 @@ public class DialogVisualizer : MonoBehaviour
         if (dialogState) 
             if (UnityEngine.InputSystem.Keyboard.current.eKey.wasPressedThisFrame) 
                 ExitDialog();
+        if (dialogState) 
+            if (UnityEngine.InputSystem.Keyboard.current.spaceKey.wasPressedThisFrame) 
+                Print("тестовая строка тестовая строка тестовая строка тестовая строка тестовая строка ");
     }
 
     IEnumerator DialogStateDelay()
@@ -102,4 +112,23 @@ public class DialogVisualizer : MonoBehaviour
             timer += Time.deltaTime;
         }
     }
+
+    public void Print(string str)
+    {
+        StartCoroutine(PrintTextBySymbol(str));
+    }
+
+    IEnumerator PrintTextBySymbol(string str)
+    {
+        textMesh.text = "";
+        for (int i = 0; i < str.Length; i++)
+        {
+            textMesh.text += str[i];
+            //audiosource
+            float randomTime = Random.Range(- timeRandomRangeToPrint, timeRandomRangeToPrint);
+            Debug.Log(randomTime);
+            yield return new WaitForSeconds(timeToPrintSymbol + randomTime);
+        }
+    }
+
 }
