@@ -15,13 +15,16 @@ public class DialogVisualizer : MonoBehaviour
     [SerializeField] AnimationCurve _fogDensityChangingOut;
     [SerializeField] AnimationCurve _skyExposureChanging;
     [SerializeField] Material skybox;
-    [SerializeField] float timeToFogChange = 1f;
+    [SerializeField] float _timeToFogChange = 1f;
 
     [Space(30)]
     [Header("Print modification")]
     [SerializeField] TextMeshProUGUI textMesh;
-    [SerializeField] float timeToPrintSymbol = 0.05f;
-    [SerializeField] float timeRandomRangeToPrint = 0.02f;
+    [SerializeField] AudioSource PrintSound;
+    [SerializeField] float _timeToPrintSymbol = 0.05f;
+    [SerializeField] float _timeRandomRangeToPrint = 0.02f;
+    [SerializeField] float _pitchRandomRange = 0.1f;
+    float _defaultPrintSoundPitch = 1f;
 
 
     void Start()
@@ -88,11 +91,11 @@ public class DialogVisualizer : MonoBehaviour
     IEnumerator IncreaseFogDensity()
     {
         float timer = 0f;
-        while (timer < timeToFogChange)
+        while (timer < _timeToFogChange)
         {
             yield return new WaitForEndOfFrame();
-            RenderSettings.fogDensity = _fogDensityChanging.Evaluate(timer/timeToFogChange);
-            skybox.SetFloat("_Exposure", _skyExposureChanging.Evaluate(timer/timeToFogChange) * 0.16f);
+            RenderSettings.fogDensity = _fogDensityChanging.Evaluate(timer/_timeToFogChange);
+            skybox.SetFloat("_Exposure", _skyExposureChanging.Evaluate(timer/_timeToFogChange) * 0.16f);
             DynamicGI.UpdateEnvironment(); 
             //skybox.color = _skyExposureChanging.Evaluate(timer/timeToFogChange) * Color.white;
             timer += Time.deltaTime;
@@ -102,11 +105,11 @@ public class DialogVisualizer : MonoBehaviour
     IEnumerator DecreaseFogDensity()
     {
         float timer = 0f;
-        while (timer < timeToFogChange)
+        while (timer < _timeToFogChange)
         {
             yield return new WaitForEndOfFrame();
-            RenderSettings.fogDensity = _fogDensityChangingOut.Evaluate(1 - timer/timeToFogChange);
-            skybox.SetFloat("_Exposure", _skyExposureChanging.Evaluate(1 - timer/timeToFogChange) * 0.16f);
+            RenderSettings.fogDensity = _fogDensityChangingOut.Evaluate(1 - timer/_timeToFogChange);
+            skybox.SetFloat("_Exposure", _skyExposureChanging.Evaluate(1 - timer/_timeToFogChange) * 0.16f);
             DynamicGI.UpdateEnvironment(); 
             //skybox. = _skyExposureChanging.Evaluate(1 - timer/timeToFogChange) * Color.white;
             timer += Time.deltaTime;
@@ -121,14 +124,16 @@ public class DialogVisualizer : MonoBehaviour
     IEnumerator PrintTextBySymbol(string str)
     {
         textMesh.text = "";
+        _defaultPrintSoundPitch = PrintSound.pitch;
         for (int i = 0; i < str.Length; i++)
         {
             textMesh.text += str[i];
-            //audiosource
-            float randomTime = Random.Range(- timeRandomRangeToPrint, timeRandomRangeToPrint);
-            Debug.Log(randomTime);
-            yield return new WaitForSeconds(timeToPrintSymbol + randomTime);
+            PrintSound.pitch = _defaultPrintSoundPitch + Random.Range(-_pitchRandomRange, _pitchRandomRange);
+            PrintSound.Play();
+            float randomTime = Random.Range(- _timeRandomRangeToPrint, _timeRandomRangeToPrint);
+            yield return new WaitForSeconds(_timeToPrintSymbol + randomTime);
         }
+        PrintSound.pitch = _defaultPrintSoundPitch;
     }
 
 }
