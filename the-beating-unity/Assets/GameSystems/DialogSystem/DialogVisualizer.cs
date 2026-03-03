@@ -20,7 +20,7 @@ public class DialogVisualizer : MonoBehaviour
     [Space(30)]
     [Header("Print modification")]
     [SerializeField] TextMeshProUGUI textMesh;
-    [SerializeField] AudioSource PrintSound;
+    [SerializeField] AudioSource printSound, printSound2;
     [SerializeField] float _timeToPrintSymbol = 0.05f;
     [SerializeField] float _timeRandomRangeToPrint = 0.02f;
     [SerializeField] float _pitchRandomRange = 0.1f;
@@ -124,16 +124,25 @@ public class DialogVisualizer : MonoBehaviour
     IEnumerator PrintTextBySymbol(string str)
     {
         textMesh.text = "";
-        _defaultPrintSoundPitch = PrintSound.pitch;
+        _defaultPrintSoundPitch = printSound.pitch;
         for (int i = 0; i < str.Length; i++)
         {
             textMesh.text += str[i];
-            PrintSound.pitch = _defaultPrintSoundPitch + Random.Range(-_pitchRandomRange, _pitchRandomRange);
-            PrintSound.Play();
+            if(i % 2 == 0)
+            {
+                printSound.pitch = _defaultPrintSoundPitch + Random.Range(-_pitchRandomRange, _pitchRandomRange);
+                printSound.Play();
+            }
+            else
+            {
+                printSound2.pitch = _defaultPrintSoundPitch + Random.Range(-_pitchRandomRange, _pitchRandomRange);
+                printSound2.Play();
+            }
+            
             float randomTime = Random.Range(- _timeRandomRangeToPrint, _timeRandomRangeToPrint);
             yield return new WaitForSeconds(_timeToPrintSymbol + randomTime);
         }
-        PrintSound.pitch = _defaultPrintSoundPitch;
+        printSound.pitch = _defaultPrintSoundPitch;
     }
 
 }
