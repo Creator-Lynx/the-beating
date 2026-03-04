@@ -27,6 +27,9 @@ public class DialogVisualizer : MonoBehaviour
     float _defaultPrintSoundPitch = 1f;
 
 
+    public bool IsPrinting = false;
+
+
     void Start()
     {
         _canvasOnTrigger = Animator.StringToHash(_canvasOnTriggerName);
@@ -72,7 +75,10 @@ public class DialogVisualizer : MonoBehaviour
                 ExitDialog();
         if (dialogState) 
             if (UnityEngine.InputSystem.Keyboard.current.spaceKey.wasPressedThisFrame) 
-                Print("тестовая строка тестовая строка тестовая строка тестовая строка тестовая строка ");
+                if(IsPrinting)
+                    PrintAll();
+                else
+                    Print("тестовая строка тестовая строка тестовая строка тестовая строка тестовая строка ");
     }
 
     IEnumerator DialogStateDelay()
@@ -97,7 +103,6 @@ public class DialogVisualizer : MonoBehaviour
             RenderSettings.fogDensity = _fogDensityChanging.Evaluate(timer/_timeToFogChange);
             skybox.SetFloat("_Exposure", _skyExposureChanging.Evaluate(timer/_timeToFogChange) * 0.16f);
             DynamicGI.UpdateEnvironment(); 
-            //skybox.color = _skyExposureChanging.Evaluate(timer/timeToFogChange) * Color.white;
             timer += Time.deltaTime;
         }
     }
@@ -111,18 +116,27 @@ public class DialogVisualizer : MonoBehaviour
             RenderSettings.fogDensity = _fogDensityChangingOut.Evaluate(1 - timer/_timeToFogChange);
             skybox.SetFloat("_Exposure", _skyExposureChanging.Evaluate(1 - timer/_timeToFogChange) * 0.16f);
             DynamicGI.UpdateEnvironment(); 
-            //skybox. = _skyExposureChanging.Evaluate(1 - timer/timeToFogChange) * Color.white;
             timer += Time.deltaTime;
         }
     }
 
+    string tmpString;
     public void Print(string str)
     {
+        tmpString = str;
         StartCoroutine(PrintTextBySymbol(str));
+    }
+
+    public void PrintAll()
+    {
+        StopAllCoroutines();
+        IsPrinting = false;
+        textMesh.text = tmpString;
     }
 
     IEnumerator PrintTextBySymbol(string str)
     {
+        IsPrinting = true;
         textMesh.text = "";
         _defaultPrintSoundPitch = printSound.pitch;
         for (int i = 0; i < str.Length; i++)
@@ -143,6 +157,7 @@ public class DialogVisualizer : MonoBehaviour
             yield return new WaitForSeconds(_timeToPrintSymbol + randomTime);
         }
         printSound.pitch = _defaultPrintSoundPitch;
+        IsPrinting = false;
     }
 
 }
