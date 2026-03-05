@@ -58,7 +58,7 @@ public class HeartBehaviour : MonoBehaviour, IInteractivable
 
     IEnumerator DelayForStartSpeaking()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1f);
         dialogHeart.CallNextPhrase();
     }
 }

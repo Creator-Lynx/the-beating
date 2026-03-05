@@ -65,6 +65,8 @@ public class DialogVisualizer : MonoBehaviour
         Cursor.visible = false;
 
         StartCoroutine(DecreaseFogDensity());
+
+        textMesh.text = "";
     }
 
 
