@@ -67,19 +67,6 @@ public class DialogVisualizer : MonoBehaviour
         StartCoroutine(DecreaseFogDensity());
     }
 
-    //temporary handle
-    void Update()
-    {
-        if (dialogState) 
-            if (UnityEngine.InputSystem.Keyboard.current.eKey.wasPressedThisFrame) 
-                ExitDialog();
-        if (dialogState) 
-            if (UnityEngine.InputSystem.Keyboard.current.spaceKey.wasPressedThisFrame) 
-                if(IsPrinting)
-                    PrintAll();
-                else
-                    Print("тестовая строка тестовая строка тестовая строка тестовая строка тестовая строка ");
-    }
 
     IEnumerator DialogStateDelay()
     {

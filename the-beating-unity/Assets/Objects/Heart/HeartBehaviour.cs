@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -11,6 +12,7 @@ public class HeartBehaviour : MonoBehaviour, IInteractivable
     bool isHungryState = false;
 
     [SerializeField] DialogVisualizer dialogVisualizer;
+    [SerializeField] DialogHeart_Upgrading dialogHeart;
 
     int ConsumedMeatCount = 0;
 
@@ -46,10 +48,17 @@ public class HeartBehaviour : MonoBehaviour, IInteractivable
         SetUsualState();
         ConsumedMeatCount += HandResourceInventory.resourceInventory.ResourceTransfer();
         dialogVisualizer.EnterDialog();
+        StartCoroutine(DelayForStartSpeaking());
     }
 
     public string GetInteractionHint()
     {
         return isHungryState? "кормить" : "говорить";
+    }
+
+    IEnumerator DelayForStartSpeaking()
+    {
+        yield return new WaitForSeconds(1.5f);
+        dialogHeart.CallNextPhrase();
     }
 }
